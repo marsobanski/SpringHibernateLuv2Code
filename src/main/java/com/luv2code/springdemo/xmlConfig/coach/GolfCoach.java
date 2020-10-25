@@ -1,12 +1,13 @@
-package com.luv2code.springdemo.coach;
+package com.luv2code.springdemo.xmlConfig.coach;
 
-import com.luv2code.springdemo.fortuneService.RandomFortuneService;
+import com.luv2code.springdemo.xmlConfig.fortuneService.RandomFortuneService;
 
 public class GolfCoach implements Coach {
 
     private RandomFortuneService randomFortuneService;
 
     public GolfCoach(RandomFortuneService randomFortuneService) {
+        this.randomFortuneService = randomFortuneService;
     }
 
     @Override

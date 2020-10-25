@@ -1,7 +1,7 @@
-package com.luv2code.springdemo.app;
+package com.luv2code.springdemo.xmlConfig.app;
 
-import com.luv2code.springdemo.coach.Coach;
-import com.luv2code.springdemo.coach.TrackCoach;
+import com.luv2code.springdemo.xmlConfig.coach.Coach;
+import com.luv2code.springdemo.xmlConfig.coach.TrackCoach;
 
 public class MyApp {
     public static void main(String[] args) {

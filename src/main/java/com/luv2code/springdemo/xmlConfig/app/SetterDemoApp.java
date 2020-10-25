@@ -1,6 +1,6 @@
-package com.luv2code.springdemo.app;
+package com.luv2code.springdemo.xmlConfig.app;
 
-import com.luv2code.springdemo.coach.CricketCoach;
+import com.luv2code.springdemo.xmlConfig.coach.CricketCoach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SetterDemoApp {
@@ -8,7 +8,7 @@ public class SetterDemoApp {
     public static void main(String[] args) {
 
         //load Spring config file
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("xmlConfig/applicationContext.xml");
 
         //retrieve bean from Spring container
         CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);

@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.fortuneService;
+package com.luv2code.springdemo.xmlConfig.fortuneService;
 
 import java.util.Random;
 

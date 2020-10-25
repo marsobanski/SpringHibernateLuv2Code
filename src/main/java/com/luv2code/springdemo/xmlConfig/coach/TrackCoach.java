@@ -1,6 +1,6 @@
-package com.luv2code.springdemo.coach;
+package com.luv2code.springdemo.xmlConfig.coach;
 
-import com.luv2code.springdemo.fortuneService.FortuneService;
+import com.luv2code.springdemo.xmlConfig.fortuneService.FortuneService;
 
 public class TrackCoach implements Coach {
 
@@ -23,5 +23,13 @@ public class TrackCoach implements Coach {
         return "Just do it! " + fortuneService.getFortune();
     }
 
+    //add an init method
+    public void doMyStartupStuff() {
+        System.out.println("TrackCoach: inside init method");
+    }
 
+    //add a destroy method
+    public void doMyCleanupStuff() {
+        System.out.println("TrackCoach: inside destroy method");
+    }
 }

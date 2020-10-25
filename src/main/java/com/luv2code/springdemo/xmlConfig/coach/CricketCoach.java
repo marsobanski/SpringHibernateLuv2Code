@@ -1,6 +1,6 @@
-package com.luv2code.springdemo.coach;
+package com.luv2code.springdemo.xmlConfig.coach;
 
-import com.luv2code.springdemo.fortuneService.FortuneService;
+import com.luv2code.springdemo.xmlConfig.fortuneService.FortuneService;
 
 public class CricketCoach implements Coach {
 

@@ -13,18 +13,18 @@
     <!-- Define your beans here -->
 
     <!-- Define the dependency -->
-    <bean id="myFortuneService" class="com.luv2code.springdemo.fortuneService.HappyFortuneService"/>
-    <bean id="myRandomFortuneService" class="com.luv2code.springdemo.fortuneService.RandomFortuneService"/>
+    <bean id="myFortuneService" class="com.luv2code.springdemo.xmlConfig.fortuneService.HappyFortuneService"/>
+    <bean id="myRandomFortuneService" class="com.luv2code.springdemo.xmlConfig.fortuneService.RandomFortuneService"/>
 
-    <bean id="myCoach" class="com.luv2code.springdemo.coach.TrackCoach">
+    <bean id="myCoach" class="com.luv2code.springdemo.xmlConfig.coach.TrackCoach">
         <constructor-arg ref="myFortuneService"/> <!-- set up constructor injection -->
     </bean>
 
-    <bean id="myGolfCoach" class="com.luv2code.springdemo.coach.GolfCoach">
+    <bean id="myGolfCoach" class="com.luv2code.springdemo.xmlConfig.coach.GolfCoach" scope="prototype">
         <constructor-arg  ref="myRandomFortuneService"/>
     </bean>
 
-    <bean id="myCricketCoach" class="com.luv2code.springdemo.coach.CricketCoach">
+    <bean id="myCricketCoach" class="com.luv2code.springdemo.xmlConfig.coach.CricketCoach">
         <property name="fortuneService" ref="myFortuneService"/> <!-- set up setter injection -->
         <property name="emailAdress" value="${foo.email}"/> <!-- set up setter injection -->
         <property name="team" value="${foo.team}"/> <!-- set up setter injection -->
