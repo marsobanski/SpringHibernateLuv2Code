@@ -1,19 +1,24 @@
-package com.luv2code.springdemo.annotationsConfig.app;
+package com.luv2code.springdemo.annotationsConfig.coach;
 
-import com.luv2code.springdemo.annotationsConfig.coach.Coach;
 import com.luv2code.springdemo.annotationsConfig.fortuneService.FortuneService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-public class SwimCoach implements Coach {
 
+public class RunCoach implements Coach {
+
+    @Qualifier("runFortuneService")
+    @Autowired
     private FortuneService fortuneService;
 
-    public SwimCoach(FortuneService fortuneService) {
+    public RunCoach(FortuneService fortuneService) {
+        System.out.println("RunCoach - inside Constructor");
         this.fortuneService = fortuneService;
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Swim 1000 m for warmup";
+        return null;
     }
 
     @Override

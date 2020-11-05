@@ -13,7 +13,7 @@ public class NoXmlConfigApp {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 
         //get bean from spring container
-        Coach theCoach = context.getBean("tennisCoach", Coach.class);
+        Coach theCoach = context.getBean("swimCoach", Coach.class);
 
         //call method on beam
         System.out.println(theCoach.getDailyWorkout());
